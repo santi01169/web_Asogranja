@@ -91,7 +91,9 @@ export default function AsogranjaPage() {
               <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
                 Contacto
               </a>
-              <Button className="bg-primary hover:bg-primary/90">Reservar</Button>
+              <Button className="bg-primary hover:bg-primary/90" onClick={() => window.open("https://wa.me/573105831864?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20las%20reservas%20en%20ASOGRANJA")}>
+                Reservar
+              </Button>
             </div>
 
             <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -130,7 +132,9 @@ export default function AsogranjaPage() {
               >
                 Contacto
               </a>
-              <Button className="w-full bg-primary hover:bg-primary/90">Reservar</Button>
+              <Button className="w-full bg-primary hover:bg-primary/90" onClick={() => window.open("https://wa.me/573105831864?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20las%20reservas%20en%20ASOGRANJA")}>
+                Reservar
+              </Button>
             </div>
           )}
         </div>
@@ -159,10 +163,23 @@ export default function AsogranjaPage() {
               campesina
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-lg px-8"
+                onClick={() => {
+                  document.getElementById('rutas')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Explorar Rutas
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 bg-transparent"
+                onClick={() => {
+                  document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Conocer Más
               </Button>
             </div>
@@ -391,10 +408,19 @@ export default function AsogranjaPage() {
               Contáctanos para reservar tu experiencia o conocer más sobre nuestras rutas turísticas y productos
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-lg px-8"
+                onClick={() => window.open("https://wa.me/573105831864?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20ASOGRANJA")}
+              >
                 Contactar Ahora
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 bg-transparent"
+                onClick={() => window.open("https://wa.me/573105831864?text=Hola,%20me%20gustaría%20consultar%20la%20disponibilidad%20de%20las%20rutas%20turísticas")}
+              >
                 Ver Disponibilidad
               </Button>
             </div>
