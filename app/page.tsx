@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Menu, X, MapPin, Users, Heart, Leaf, Mountain, Droplets, BookOpen, Compass } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function AsogranjaPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,27 +26,34 @@ export default function AsogranjaPage() {
       icon: Compass,
       image: "/colombian-rural-pilgrimage-path-mountains.jpg",
       color: "from-emerald-500/20 to-green-600/20",
+      link: "/rutas/peregrinacion",
     },
     {
       title: "Corredor Ancestral",
-      description: "Descubre los caminos que nuestros ancestros recorrieron, llenos de historia y sabiduría.",
+      description:
+        "Descubre los caminos ancestrales en la Vereda Monquira, donde la historia, la música tradicional y la memoria cultural cobran vida.",
       icon: Mountain,
-      image: "/ancestral-colombian-mountain-trail-heritage.jpg",
+      image: "/corredor-ancestral-musicians-campfire.jpg",
       color: "from-amber-500/20 to-yellow-600/20",
+      link: "/rutas/corredor-ancestral",
     },
     {
       title: "Saberes Tradicionales",
-      description: "Aprende técnicas agrícolas ancestrales, gastronomía típica y artesanía campesina.",
+      description:
+        "Aprende técnicas agrícolas ancestrales, gastronomía típica y artesanía campesina directamente de nuestros maestros rurales.",
       icon: BookOpen,
       image: "/traditional-colombian-farming-crafts-rural.jpg",
       color: "from-lime-500/20 to-green-500/20",
+      link: "/rutas/saberes-tradicionales",
     },
     {
       title: "Ruta del Agua",
-      description: "Explora fuentes hídricas, cascadas y ecosistemas acuáticos en un viaje de conservación.",
+      description:
+        "Explora fuentes hídricas, cascadas y ecosistemas acuáticos en un viaje de conservación y respeto por el recurso más vital.",
       icon: Droplets,
       image: "/colombian-waterfall-rural-nature-stream.jpg",
       color: "from-cyan-500/20 to-blue-600/20",
+      link: "/rutas/ruta-del-agua",
     },
   ]
 
@@ -91,9 +99,7 @@ export default function AsogranjaPage() {
               <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
                 Contacto
               </a>
-              <Button className="bg-primary hover:bg-primary/90" onClick={() => window.open("https://wa.me/573105831864?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20las%20reservas%20en%20ASOGRANJA")}>
-                Reservar
-              </Button>
+              <Button className="bg-primary hover:bg-primary/90">Reservar</Button>
             </div>
 
             <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -132,9 +138,7 @@ export default function AsogranjaPage() {
               >
                 Contacto
               </a>
-              <Button className="w-full bg-primary hover:bg-primary/90" onClick={() => window.open("https://wa.me/573105831864?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20las%20reservas%20en%20ASOGRANJA")}>
-                Reservar
-              </Button>
+              <Button className="w-full bg-primary hover:bg-primary/90">Reservar</Button>
             </div>
           )}
         </div>
@@ -163,23 +167,10 @@ export default function AsogranjaPage() {
               campesina
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-lg px-8"
-                onClick={() => {
-                  document.getElementById('rutas')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
                 Explorar Rutas
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 bg-transparent"
-                onClick={() => {
-                  document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
+              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
                 Conocer Más
               </Button>
             </div>
@@ -229,12 +220,14 @@ export default function AsogranjaPage() {
                     {route.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">{route.description}</p>
-                  <Button
-                    variant="outline"
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
-                  >
-                    Más Información
-                  </Button>
+                  <Link href={route.link}>
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                    >
+                      Más Información
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -408,19 +401,10 @@ export default function AsogranjaPage() {
               Contáctanos para reservar tu experiencia o conocer más sobre nuestras rutas turísticas y productos
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-lg px-8"
-                onClick={() => window.open("https://wa.me/573105831864?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20ASOGRANJA")}
-              >
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
                 Contactar Ahora
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 bg-transparent"
-                onClick={() => window.open("https://wa.me/573105831864?text=Hola,%20me%20gustaría%20consultar%20la%20disponibilidad%20de%20las%20rutas%20turísticas")}
-              >
+              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
                 Ver Disponibilidad
               </Button>
             </div>
