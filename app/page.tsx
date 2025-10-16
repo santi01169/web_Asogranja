@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Menu, X, MapPin, Users, Heart, Leaf, Mountain, Droplets, BookOpen, Compass } from "lucide-react"
+import { Menu, X, MapPin, Users, Heart, Leaf, Mountain, Droplets, BookOpen } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -21,12 +21,13 @@ export default function AsogranjaPage() {
 
   const routes = [
     {
-      title: "Ruta de la Peregrinación",
-      description: "Un recorrido espiritual que conecta tradición y fe campesina con paisajes naturales únicos.",
-      icon: Compass,
-      image: "/colombian-rural-pilgrimage-path-mountains.jpg",
-      color: "from-emerald-500/20 to-green-600/20",
-      link: "/rutas/peregrinacion",
+      title: "Turismo Cultural",
+      description:
+        "Vive la cultura campesina a través de música, danza, gastronomía y tradiciones ancestrales en Casa Cultura.",
+      icon: BookOpen,
+      image: "/cultural-center-gathering.jpg",
+      color: "from-lime-500/20 to-green-500/20",
+      link: "/rutas/turismo-cultural",
     },
     {
       title: "Corredor Ancestral",
@@ -40,10 +41,10 @@ export default function AsogranjaPage() {
     {
       title: "Saberes Tradicionales",
       description:
-        "Aprende técnicas agrícolas ancestrales, gastronomía típica y artesanía campesina directamente de nuestros maestros rurales.",
+        "Aprende técnicas agrícolas ancestrales, elaboración de productos artesanales y secretos culinarios transmitidos por generaciones.",
       icon: BookOpen,
       image: "/traditional-colombian-farming-crafts-rural.jpg",
-      color: "from-lime-500/20 to-green-500/20",
+      color: "from-orange-500/20 to-red-600/20",
       link: "/rutas/saberes-tradicionales",
     },
     {

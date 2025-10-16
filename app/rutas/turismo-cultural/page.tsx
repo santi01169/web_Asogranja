@@ -2,25 +2,12 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  ArrowLeft,
-  MapPin,
-  Clock,
-  Users,
-  Phone,
-  Mail,
-  Music,
-  Sparkles,
-  Mountain,
-  Heart,
-  Camera,
-  Video,
-} from "lucide-react"
+import { ArrowLeft, MapPin, Clock, Users, Phone, Mail, Music, Sparkles, Heart, Camera, Video } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef } from "react"
 
-export default function CorredorAncestralPage() {
+export default function TurismoCulturalPage() {
   const heroRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -44,8 +31,8 @@ export default function CorredorAncestralPage() {
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100 dark:from-background dark:via-background dark:to-stone-950">
       <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden mt-4">
         <Image
-          src="/corredor-ancestral-musicians-campfire.jpg"
-          alt="Músicos tradicionales alrededor de fogata en Ciudad de la Memoria"
+          src="/cultural-center-gathering.jpg"
+          alt="Turismo Cultural - Experiencias comunitarias"
           fill
           className="object-cover object-center"
           priority
@@ -71,15 +58,13 @@ export default function CorredorAncestralPage() {
                   className="text-4xl md:text-6xl font-bold text-white text-balance"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
-                  Corredor Ancestral
+                  Turismo Cultural
                 </h1>
               </div>
               <p className="text-xl md:text-2xl text-white/95 text-pretty mb-2">
-                Un viaje a través del tiempo y la tradición
+                Vive la cultura campesina en su máxima expresión
               </p>
-              <p className="text-lg text-white/85 text-pretty">
-                Donde la música y la memoria se encuentran bajo las estrellas
-              </p>
+              <p className="text-lg text-white/85 text-pretty">Música, danza, gastronomía y tradiciones ancestrales</p>
             </div>
           </div>
         </div>
@@ -91,26 +76,26 @@ export default function CorredorAncestralPage() {
             <Card className="border border-stone-200 dark:border-stone-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardContent className="p-8 md:p-12 space-y-6">
                 <div className="flex items-center gap-3 mb-6">
-                  <Mountain className="w-8 h-8 text-stone-600 dark:text-stone-400" />
+                  <Music className="w-8 h-8 text-stone-600 dark:text-stone-400" />
                   <h2
                     className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
-                    Una Experiencia Única
+                    Una Experiencia Cultural Única
                   </h2>
                 </div>
                 <p className="text-xl leading-relaxed text-stone-700 dark:text-stone-300">
-                  Descubre los caminos ancestrales en la{" "}
-                  <strong className="text-stone-900 dark:text-stone-100">Vereda Monquira</strong>, donde la historia, la
-                  música tradicional y la memoria cultural cobran vida. Esta experiencia única te conecta con las raíces
-                  muiscas de nuestro territorio.
+                  Sumérgete en la riqueza cultural de Sogamoso a través de experiencias auténticas que celebran las
+                  tradiciones campesinas. En{" "}
+                  <strong className="text-stone-900 dark:text-stone-100">Casa Cultura</strong> y los puntos de
+                  información turística, descubrirás la música tradicional, la danza folclórica y la gastronomía
+                  ancestral.
                 </p>
                 <div className="h-1 w-24 bg-gradient-to-r from-stone-400 to-stone-500 rounded-full"></div>
                 <p className="text-lg leading-relaxed text-stone-600 dark:text-stone-400">
-                  Visita la <strong className="text-stone-900 dark:text-stone-100">Ciudad de la Memoria</strong>, un
-                  espacio dedicado a preservar y compartir las tradiciones ancestrales de Sogamoso. Disfruta de veladas
-                  culturales con música tradicional alrededor de fogatas, conoce símbolos indígenas y conecta
-                  profundamente con la historia de nuestros antepasados.
+                  Esta ruta te conecta con la esencia de nuestro territorio, donde cada actividad es una ventana a los
+                  saberes transmitidos de generación en generación. Participa en talleres culturales, disfruta de
+                  presentaciones musicales en vivo, y degusta los sabores auténticos de la cocina boyacense.
                 </p>
               </CardContent>
             </Card>
@@ -129,12 +114,8 @@ export default function CorredorAncestralPage() {
             <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 shadow-lg">
               <CardContent className="p-0">
                 <div className="relative w-full aspect-video bg-stone-100 dark:bg-stone-900">
-                  <video
-                    controls
-                    className="w-full h-full object-cover"
-                    poster="/corredor-ancestral-musicians-campfire.jpg"
-                  >
-                    <source src="/ruta-a-tu-video.mp4" type="video/mp4" />
+                  <video controls className="w-full h-full object-cover" poster="/cultural-center-gathering.jpg">
+                    <source src="/turismo-cultural-video.mp4" type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
                   </video>
                   <div className="absolute inset-0 flex items-center justify-center bg-stone-900/50 backdrop-blur-sm">
@@ -163,17 +144,18 @@ export default function CorredorAncestralPage() {
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src="/corredor-hiking-group.jpg"
-                    alt="Grupo de turistas caminando por senderos rurales con perros"
+                    src="/turismo-rural-comunitario-sign.jpg"
+                    alt="Punto de Información Turística"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Caminatas Guiadas</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">
+                    Punto de Información Turística
+                  </h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Recorre los senderos ancestrales con guías locales que comparten historias y tradiciones del
-                    territorio.
+                    Centro de bienvenida donde comienza tu experiencia cultural en el territorio.
                   </p>
                 </CardContent>
               </Card>
@@ -181,16 +163,16 @@ export default function CorredorAncestralPage() {
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src="/corredor-waterfall-tourists.jpg"
-                    alt="Turistas disfrutando de cascada natural"
+                    src="/cultural-activities-community.jpg"
+                    alt="Actividades culturales comunitarias"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Cascadas Naturales</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Actividades Culturales</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Descubre hermosas cascadas escondidas en el paisaje montañoso de la región.
+                    Participa en talleres de danza, música y actividades recreativas tradicionales.
                   </p>
                 </CardContent>
               </Card>
@@ -198,16 +180,16 @@ export default function CorredorAncestralPage() {
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src="/corredor-ciudad-memoria-building.jpg"
-                    alt="Edificio de Ciudad de la Memoria con grupo de visitantes"
+                    src="/cultural-center-gathering.jpg"
+                    alt="Centro cultural comunitario"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Ciudad de la Memoria</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Centro Cultural</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Visita este espacio cultural dedicado a preservar y compartir las tradiciones ancestrales.
+                    Espacio de encuentro donde la comunidad comparte sus tradiciones y saberes.
                   </p>
                 </CardContent>
               </Card>
@@ -215,16 +197,16 @@ export default function CorredorAncestralPage() {
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src="/corredor-rock-formations-water.jpg"
-                    alt="Formaciones rocosas con agua y turistas"
+                    src="/traditional-food-vendor.jpg"
+                    alt="Gastronomía tradicional"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Formaciones Geológicas</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Gastronomía Tradicional</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Explora impresionantes formaciones rocosas y corrientes de agua cristalina.
+                    Degusta los sabores auténticos de la cocina boyacense preparada con recetas ancestrales.
                   </p>
                 </CardContent>
               </Card>
@@ -235,14 +217,9 @@ export default function CorredorAncestralPage() {
             <Card className="bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900 dark:to-stone-950 border border-stone-200 dark:border-stone-800 shadow-lg overflow-hidden">
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-5 gap-0">
-                  <div className="md:col-span-2 relative h-80 md:h-auto min-h-[400px] bg-white dark:bg-stone-950 flex items-center justify-center p-8">
+                  <div className="md:col-span-2 relative h-80 md:h-auto min-h-[400px] bg-black flex items-center justify-center p-8">
                     <div className="relative w-full h-full">
-                      <Image
-                        src="/ciudad-memoria-logo.jpg"
-                        alt="Ciudad de la Memoria"
-                        fill
-                        className="object-contain"
-                      />
+                      <Image src="/casa-cultura-logo.jpg" alt="Casa Cultura" fill className="object-contain" />
                     </div>
                   </div>
                   <div className="md:col-span-3 p-8 md:p-10 space-y-6 flex flex-col justify-center">
@@ -251,17 +228,18 @@ export default function CorredorAncestralPage() {
                         className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200 mb-3"
                         style={{ fontFamily: "var(--font-playfair)" }}
                       >
-                        Ciudad de la Memoria
+                        Casa Cultura
                       </h3>
                       <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400 mb-4">
                         <MapPin className="w-5 h-5" />
-                        <p className="text-lg">Vereda Monquira, Sogamoso - Boyacá</p>
+                        <p className="text-lg">Sogamoso, Boyacá</p>
                       </div>
                     </div>
                     <p className="text-lg leading-relaxed text-stone-700 dark:text-stone-300">
-                      Un lugar mágico donde convergen la historia, la cultura y las tradiciones ancestrales. Aquí podrás
-                      experimentar la autenticidad de nuestras raíces muiscas a través de actividades culturales, música
-                      tradicional y encuentros comunitarios.
+                      Nuestro centro cultural es el corazón de las experiencias turísticas en Sogamoso. Aquí se realizan
+                      presentaciones de música tradicional, talleres de danza folclórica y eventos gastronómicos que
+                      celebran nuestra identidad campesina. Un espacio de encuentro donde visitantes y comunidad local
+                      comparten saberes y tradiciones.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">
                       <Button
@@ -302,10 +280,8 @@ export default function CorredorAncestralPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Duración</h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Jornada completa o nocturna</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">
-                        Incluye velada cultural con fogata
-                      </p>
+                      <p className="text-stone-700 dark:text-stone-300 font-medium">4 a 6 horas</p>
+                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Jornada cultural completa</p>
                     </div>
                   </div>
                 </CardContent>
@@ -334,8 +310,10 @@ export default function CorredorAncestralPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Ubicación</h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Vereda Monquira</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Ciudad de la Memoria</p>
+                      <p className="text-stone-700 dark:text-stone-300 font-medium">Sogamoso, Boyacá</p>
+                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">
+                        Casa Cultura y puntos turísticos
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -351,8 +329,8 @@ export default function CorredorAncestralPage() {
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">
                         Experiencia Cultural
                       </h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Música tradicional en vivo</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Instrumentos autóctonos</p>
+                      <p className="text-stone-700 dark:text-stone-300 font-medium">Música y danza tradicional</p>
+                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Presentaciones en vivo</p>
                     </div>
                   </div>
                 </CardContent>
@@ -374,14 +352,14 @@ export default function CorredorAncestralPage() {
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    "Recorrido guiado por la Ciudad de la Memoria",
-                    "Velada cultural con música tradicional alrededor de fogata",
-                    "Presentación de instrumentos autóctonos y su historia",
-                    "Charla sobre símbolos indígenas y cultura muisca",
-                    "Refrigerios y bebidas tradicionales",
-                    "Encuentro con sabedores ancestrales",
-                    "Experiencia de conexión con la naturaleza y la historia",
-                    "Material educativo sobre patrimonio cultural",
+                    "Presentaciones de música tradicional en vivo",
+                    "Talleres de danza folclórica boyacense",
+                    "Degustación de gastronomía típica y bebidas ancestrales",
+                    "Visita a Casa Cultura y puntos de información turística",
+                    "Talleres de elaboración de artesanías locales",
+                    "Encuentro con artistas y sabedores locales",
+                    "Material educativo sobre cultura campesina",
+                    "Experiencia de inmersión en tradiciones boyacenses",
                   ].map((item, index) => (
                     <div
                       key={index}
@@ -402,10 +380,10 @@ export default function CorredorAncestralPage() {
               <CardContent className="p-10 md:p-16 text-center space-y-8 relative z-10">
                 <Sparkles className="w-16 h-16 mx-auto" />
                 <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Vive la Experiencia Ancestral
+                  Vive la Cultura Campesina
                 </h2>
                 <p className="text-xl md:text-2xl opacity-95 max-w-2xl mx-auto text-pretty">
-                  Contáctanos directamente a través de Ciudad de la Memoria y reserva tu lugar en esta experiencia única
+                  Contáctanos y reserva tu lugar en esta experiencia cultural única
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
                   <Button
@@ -439,7 +417,7 @@ export default function CorredorAncestralPage() {
                       Reserva tu Experiencia
                     </h2>
                     <p className="text-lg opacity-90 text-pretty">
-                      Contáctanos y vive una experiencia ancestral inolvidable
+                      Contáctanos y vive una experiencia cultural inolvidable
                     </p>
                   </div>
                   <div className="p-8 space-y-6 bg-white dark:bg-stone-950">
@@ -484,7 +462,7 @@ export default function CorredorAncestralPage() {
                         </div>
                         <div>
                           <p className="text-sm text-stone-600 dark:text-stone-400">Ubicación</p>
-                          <p className="font-bold text-stone-800 dark:text-stone-200">Vereda Monquira</p>
+                          <p className="font-bold text-stone-800 dark:text-stone-200">Casa Cultura</p>
                           <p className="text-sm text-stone-600 dark:text-stone-400">Sogamoso, Boyacá</p>
                         </div>
                       </div>
@@ -513,7 +491,7 @@ export default function CorredorAncestralPage() {
                       <div>
                         <h4 className="font-bold text-stone-800 dark:text-stone-200 mb-1">Experiencia Auténtica</h4>
                         <p className="text-stone-600 dark:text-stone-400 text-sm">
-                          Conecta con las verdaderas tradiciones ancestrales de la región
+                          Conecta con las verdaderas tradiciones culturales de la región
                         </p>
                       </div>
                     </div>
@@ -523,9 +501,9 @@ export default function CorredorAncestralPage() {
                         <span className="font-bold">2</span>
                       </div>
                       <div>
-                        <h4 className="font-bold text-stone-800 dark:text-stone-200 mb-1">Guías Locales</h4>
+                        <h4 className="font-bold text-stone-800 dark:text-stone-200 mb-1">Artistas Locales</h4>
                         <p className="text-stone-600 dark:text-stone-400 text-sm">
-                          Aprende de sabedores que viven y preservan estas tradiciones
+                          Aprende de músicos, bailarines y artesanos que viven estas tradiciones
                         </p>
                       </div>
                     </div>
@@ -537,7 +515,7 @@ export default function CorredorAncestralPage() {
                       <div>
                         <h4 className="font-bold text-stone-800 dark:text-stone-200 mb-1">Turismo Sostenible</h4>
                         <p className="text-stone-600 dark:text-stone-400 text-sm">
-                          Apoyamos a la comunidad local y el cuidado del medio ambiente
+                          Apoyamos a la comunidad local y el desarrollo cultural sostenible
                         </p>
                       </div>
                     </div>
