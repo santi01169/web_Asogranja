@@ -22,6 +22,7 @@ import { useEffect, useRef } from "react"
 
 export default function CorredorAncestralPage() {
   const heroRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,7 +38,27 @@ export default function CorredorAncestralPage() {
 
     document.querySelectorAll(".fade-in-section").forEach((el) => observer.observe(el))
 
-    return () => observer.disconnect()
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoRef.current?.play().catch(console.error)
+          } else {
+            videoRef.current?.pause()
+          }
+        })
+      },
+      { threshold: 0.5 },
+    )
+
+    if (videoRef.current) {
+      videoObserver.observe(videoRef.current)
+    }
+
+    return () => {
+      observer.disconnect()
+      videoObserver.disconnect()
+    }
   }, [])
 
   return (
@@ -103,7 +124,7 @@ export default function CorredorAncestralPage() {
                   Descubre los caminos ancestrales en la{" "}
                   <strong className="text-stone-900 dark:text-stone-100">Vereda Monquira</strong>, donde la historia, la
                   música tradicional y la memoria cultural cobran vida. Esta experiencia única te conecta con las raíces
-                  muiscas de nuestro territorio.
+                  Muiscas de nuestro territorio.
                 </p>
                 <div className="h-1 w-24 bg-gradient-to-r from-stone-400 to-stone-500 rounded-full"></div>
                 <p className="text-lg leading-relaxed text-stone-600 dark:text-stone-400">
@@ -126,24 +147,21 @@ export default function CorredorAncestralPage() {
                 Video de la Experiencia
               </h2>
             </div>
+
             <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 shadow-lg">
               <CardContent className="p-0">
                 <div className="relative w-full aspect-video bg-stone-100 dark:bg-stone-900">
                   <video
+                    ref={videoRef}
                     controls
+                    muted
+                    loop
                     className="w-full h-full object-cover"
                     poster="/corredor-ancestral-musicians-campfire.jpg"
                   >
-                    <source src="/ruta-a-tu-video.mp4" type="video/mp4" />
+                    <source src="/Ciudad_memoria.mp4" type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
                   </video>
-                  <div className="absolute inset-0 flex items-center justify-center bg-stone-900/50 backdrop-blur-sm">
-                    <div className="text-center text-white p-8">
-                      <Video className="w-16 h-16 mx-auto mb-4 opacity-70" />
-                      <p className="text-xl font-semibold mb-2">Video próximamente</p>
-                      <p className="text-sm opacity-80">Agrega tu video siguiendo las instrucciones en el código</p>
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -260,7 +278,7 @@ export default function CorredorAncestralPage() {
                     </div>
                     <p className="text-lg leading-relaxed text-stone-700 dark:text-stone-300">
                       Un lugar mágico donde convergen la historia, la cultura y las tradiciones ancestrales. Aquí podrás
-                      experimentar la autenticidad de nuestras raíces muiscas a través de actividades culturales, música
+                      experimentar la autenticidad de nuestras raíces Muiscas a través de actividades culturales, música
                       tradicional y encuentros comunitarios.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">

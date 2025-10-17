@@ -168,12 +168,16 @@ export default function AsogranjaPage() {
               campesina
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
-                Explorar Rutas
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
-                Conocer Más
-              </Button>
+              <Link href="#rutas">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+                  Explorar Rutas
+                </Button>
+              </Link>
+              <Link href="#nosotros">
+                <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
+                  Conocer Más
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
